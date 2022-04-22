@@ -106,8 +106,8 @@ int main()
 } 
 
 void sig_alarm_handler(){
-	status=CONTINUE;
-    wrefresh(win);
+	if(status==WAIT_INPUT)
+        status=CONTINUE;
 }
 
 void addFood(){
